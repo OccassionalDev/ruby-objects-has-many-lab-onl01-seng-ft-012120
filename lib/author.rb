@@ -10,7 +10,6 @@ class Author
       post.author = self 
     end 
   end 
-      
   
   def add_post(new_post)
     new_post.author = self
@@ -21,8 +20,8 @@ class Author
     new_post.author = self
   end 
   
-  
-  
-  
+  def self.post_count 
+    return self.posts.count
+  end 
   
 end 
