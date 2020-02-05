@@ -1,8 +1,15 @@
 class Author 
   attr_accessor :name
   
+  @@all_authors = []
+  
   def initialize(name)
     @name = name
+    save
+  end 
+  
+  def save
+    @@all_authors << self 
   end 
   
   def add_post(new_post)
