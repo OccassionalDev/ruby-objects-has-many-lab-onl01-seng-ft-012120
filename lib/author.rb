@@ -6,7 +6,11 @@ class Author
   end
   
   def posts 
-    return Post.all.select ||
+    return Post.all.select do |post| 
+      post.author = self 
+    end 
+  end 
+      
   
   def add_post(new_post)
     new_post.author = self
